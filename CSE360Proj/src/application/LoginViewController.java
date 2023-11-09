@@ -17,8 +17,8 @@ import javafx.scene.control.Alert.AlertType;
 public class LoginViewController {
 	private Scene newscene;
 	private Stage currentStage;
-	public String usernameTest = "usertest1";
-	public String passwordTest = "passtest1";
+	public String usernameTest = "usertest";
+	public String passwordTest = "passtest";
     @FXML
     private PasswordField passwordField;
     
