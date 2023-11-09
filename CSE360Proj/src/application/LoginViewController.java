@@ -15,10 +15,10 @@ import javafx.scene.control.Alert.AlertType;
 
 
 public class LoginViewController {
-	private Scene scene;
-	private Stage stage;
-	public String usernameTest = "usertest";
-	public String passwordTest = "passtest";
+	private Scene newscene;
+	private Stage currentStage;
+	public String usernameTest = "usertest1";
+	public String passwordTest = "passtest1";
     @FXML
     private PasswordField passwordField;
     
@@ -33,14 +33,13 @@ public class LoginViewController {
 
     @FXML
     void submitLogin(ActionEvent event) throws IOException {
-    	String username1 = usernameField.getText().toString();
-    	String password1 = passwordField.getText().toString();
-    	if (usernameTest.equals(username1) && passwordTest.equals(password1)) {
+    	String username = usernameField.getText().toString();
+    	String password = passwordField.getText().toString();
+    	if (usernameTest.equals(username) && passwordTest.equals(password)) {
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ELMainPage.fxml"));
-    	scene = new Scene(fxmlLoader.load());
-    	stage = new Stage();
-    	stage.setScene(scene);
-    	stage.show();
+    	newscene = new Scene(fxmlLoader.load());
+    	currentStage = (Stage) submitButton.getScene().getWindow();
+    	currentStage.setScene(newscene);
     	}
     	else {
     		passwordPrompt.setVisible(true);
