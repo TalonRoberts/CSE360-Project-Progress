@@ -17,10 +17,11 @@
       <PasswordField fx:id="passwordField" layoutX="199.0" layoutY="255.0" prefHeight="26.0" prefWidth="238.0" />
       <Label layoutX="166.0" layoutY="151.0" text="ID" />
       <Label layoutX="128.0" layoutY="259.0" text="Password" />
-      <Button fx:id="submitButton" layoutX="437.0" layoutY="309.0" mnemonicParsing="false" onAction="#submitAC" text="Submit" />
- <Label fx:id="errorlabel" alignment="CENTER" layoutX="241.0" layoutY="292.0" prefHeight="17.0" prefWidth="154.0" text="Invalid Username/Password" textFill="RED" visible="false" />
+      <Button fx:id="submitButton" layoutX="291.0" layoutY="338.0" mnemonicParsing="false" onAction="#submitAC" text="LOGIN" />
+ <Label fx:id="errorlabel" alignment="CENTER" layoutX="242.0" layoutY="301.0" prefHeight="17.0" prefWidth="154.0" text="Invalid Username/Password" textFill="RED" visible="false" />
       <TextField fx:id="usernameField" layoutX="200.0" layoutY="200.0" prefHeight="26.0" prefWidth="237.0" />
       <Label layoutX="126.0" layoutY="205.0" text="Username" />
       <TextField fx:id="idField" layoutX="200.0" layoutY="147.0" prefHeight="25.0" prefWidth="237.0" />
+      <Button fx:id="backButton" layoutX="26.0" layoutY="351.0" mnemonicParsing="false" onAction="#backToLogin" text="BACK" />
    </children>
 </AnchorPane>

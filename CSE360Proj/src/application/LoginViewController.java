@@ -37,6 +37,9 @@ public class LoginViewController{
     
     @FXML
     private Label errorlabel;
+    
+    @FXML
+    private Button newUserButton;
 
     @FXML
     void submitLogin(ActionEvent event) throws IOException {
@@ -50,9 +53,23 @@ public class LoginViewController{
 	    	currentStage = (Stage) submitButton.getScene().getWindow();
 	    	currentStage.setScene(newscene);
     	}
-    	else {
+    	else if(loginEmployee==null){
+    		errorlabel.setText("User Does Not Exits");
     		errorlabel.setVisible(true);
     		passwordField.clear();
     	}
+    	else {
+    		errorlabel.setText("Username/Password Error");
+    		errorlabel.setVisible(true);
+    		passwordField.clear();
+    	}
+    }
+    
+    @FXML
+    void switchToAC(ActionEvent event) throws IOException {
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AccountCreation.fxml"));
+    	newscene = new Scene(fxmlLoader.load());
+    	currentStage = (Stage) submitButton.getScene().getWindow();
+    	currentStage.setScene(newscene);
     }
 }

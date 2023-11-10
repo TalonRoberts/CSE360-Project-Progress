@@ -14,11 +14,12 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="199.0" layoutY="186.0" prefHeight="26.0" prefWidth="237.0" />
-      <PasswordField fx:id="passwordField" layoutX="199.0" layoutY="255.0" prefHeight="26.0" prefWidth="238.0" />
-      <Label layoutX="126.0" layoutY="191.0" text="Username" />
-      <Label layoutX="128.0" layoutY="259.0" text="Password" />
-      <Button fx:id="submitButton" layoutX="437.0" layoutY="309.0" mnemonicParsing="false" onAction="#submitLogin" text="Submit" />
- <Label fx:id="errorlabel" alignment="CENTER" layoutX="241.0" layoutY="292.0" prefHeight="17.0" prefWidth="154.0" text="Invalid Username/Password" textFill="RED" visible="false" />
+      <TextField fx:id="usernameField" layoutX="200.0" layoutY="165.0" prefHeight="26.0" prefWidth="237.0" />
+      <PasswordField fx:id="passwordField" layoutX="199.0" layoutY="233.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="126.0" layoutY="170.0" text="Username" />
+      <Label layoutX="128.0" layoutY="238.0" text="Password" />
+      <Button fx:id="submitButton" layoutX="291.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitLogin" text="LOGIN" />
+ <Label fx:id="errorlabel" alignment="CENTER" layoutX="241.0" layoutY="287.0" prefHeight="17.0" prefWidth="154.0" text="Invalid Username/Password" textFill="RED" visible="false" />
+      <Button fx:id="newUserButton" layoutX="498.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToAC" text="NEW USER" />
    </children>
 </AnchorPane>

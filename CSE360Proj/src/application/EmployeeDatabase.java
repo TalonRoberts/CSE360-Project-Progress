@@ -8,7 +8,12 @@ public class EmployeeDatabase {
 	
 	private EmployeeDatabase() {
 		employeeList = new ArrayList<>();
-		employeeList.add(new Employee(9, "lynx", "meow9?"));
+		employeeList.add(new Employee(1, "Daniel", "Th59"));
+		employeeList.add(new Employee(2, "Oscar", "Th59"));
+		employeeList.add(new Employee(3, "Andrew", "Th59"));
+		employeeList.add(new Employee(4, "Talon", "Th59"));
+		employeeList.add(new Employee(5, "Angel", "Th59"));
+		employeeList.add(new Employee(6, "Lynn"));
 	}
 	
 	public static EmployeeDatabase getInstance() {
@@ -16,6 +21,14 @@ public class EmployeeDatabase {
 			instance = new EmployeeDatabase();
 		}
 		return instance;
+	}
+	
+	public void addEmployee(Employee employee) {
+		employeeList.add(employee);
+	}
+	
+	public void remove(Employee employee) {
+		employeeList.remove(employee);
 	}
 	
 	public ArrayList<Employee> getEmployeeList() {

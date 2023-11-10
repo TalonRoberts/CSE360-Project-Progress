@@ -15,7 +15,7 @@ import application.Employee;
 import application.EmployeeDatabase;
 
 public class AccountCreationController {
-	private Scene newscene;
+	private Scene loginreturn;
 	private Stage currentStage;
 	
 	EmployeeDatabase employeeDatabase = EmployeeDatabase.getInstance();
@@ -36,22 +36,22 @@ public class AccountCreationController {
     @FXML
     private Label errorlabel;
     
+    @FXML 
+    private Label newUserButton;
+    
+    @FXML
+    private Button backButton;
+    
     @FXML
     void submitAC (ActionEvent event) throws IOException{
     	
-    	String username = usernameField.getText().toString();
-    	String password = passwordField.getText().toString();
-    	Employee loginEmployee = employeeDatabase.getEmployee(employeeList, username);
+    }
     
-    	if (loginEmployee!=null && loginEmployee.getPassword().equals(password)) {
-	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ELMainPage.fxml"));
-	    	newscene = new Scene(fxmlLoader.load());
-	    	currentStage = (Stage) submitButton.getScene().getWindow();
-	    	currentStage.setScene(newscene);
-    	}
-    	else {
-    		errorlabel.setVisible(true);
-    		passwordField.clear();
-    	}
+    @FXML
+    void backToLogin (ActionEvent event) throws IOException{
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+    	loginreturn = new Scene(fxmlLoader.load());
+    	currentStage = (Stage) backButton.getScene().getWindow();
+    	currentStage.setScene(loginreturn);
     }
 }
