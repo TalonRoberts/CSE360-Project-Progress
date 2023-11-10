@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
+
 //LoginPage FXML Elements
 
 
@@ -15,7 +16,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+			Parent root = loader.load();
+			
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -27,6 +30,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+		
 	}
 	
 	

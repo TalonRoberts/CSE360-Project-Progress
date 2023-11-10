@@ -14,19 +14,14 @@ import javafx.scene.control.*;	//imports all javafx.scene.control. functions
 import application.Employee;
 import application.EmployeeDatabase;
 
-
-
-
-
-public class LoginViewController{
+public class AccountCreationController {
 	private Scene newscene;
 	private Stage currentStage;
 	
 	EmployeeDatabase employeeDatabase = EmployeeDatabase.getInstance();
 	ArrayList<Employee> employeeList = employeeDatabase.getEmployeeList();
-
 	
-    @FXML
+	@FXML
     private PasswordField passwordField;
 
     @FXML
@@ -36,10 +31,14 @@ public class LoginViewController{
     private TextField usernameField;
     
     @FXML
-    private Label errorlabel;
-
+    private TextField idField;
+    
     @FXML
-    void submitLogin(ActionEvent event) throws IOException {
+    private Label errorlabel;
+    
+    @FXML
+    void submitAC (ActionEvent event) throws IOException{
+    	
     	String username = usernameField.getText().toString();
     	String password = passwordField.getText().toString();
     	Employee loginEmployee = employeeDatabase.getEmployee(employeeList, username);

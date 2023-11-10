@@ -6,8 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.layout.VBox?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginViewController">
    <children>
@@ -16,13 +14,11 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <VBox fx:id="passwordPrompt" visible="false" alignment="BOTTOM_CENTER" spacing="10">
-    <Label text="Invalid Password" />
-</VBox>
       <TextField fx:id="usernameField" layoutX="199.0" layoutY="186.0" prefHeight="26.0" prefWidth="237.0" />
       <PasswordField fx:id="passwordField" layoutX="199.0" layoutY="255.0" prefHeight="26.0" prefWidth="238.0" />
       <Label layoutX="126.0" layoutY="191.0" text="Username" />
       <Label layoutX="128.0" layoutY="259.0" text="Password" />
       <Button fx:id="submitButton" layoutX="437.0" layoutY="309.0" mnemonicParsing="false" onAction="#submitLogin" text="Submit" />
+ <Label fx:id="errorlabel" alignment="CENTER" layoutX="241.0" layoutY="292.0" prefHeight="17.0" prefWidth="154.0" text="Invalid Username/Password" textFill="RED" visible="false" />
    </children>
 </AnchorPane>
