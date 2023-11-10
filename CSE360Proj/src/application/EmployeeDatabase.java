@@ -5,6 +5,7 @@ import application.Employee;
 public class EmployeeDatabase {
 	private static EmployeeDatabase instance;
 	private ArrayList<Employee> employeeList;
+	private Employee currentEmployee;
 	
 	private EmployeeDatabase() {
 		employeeList = new ArrayList<>();
@@ -42,5 +43,19 @@ public class EmployeeDatabase {
 			}
 		}
 		return null;
+	}
+	public Employee getEmployee(ArrayList<Employee> list, int id) {
+		for (Employee employee: list) {
+			if (employee.getId() == id) {
+				return employee;
+			}
+		}
+		return null;
+	}
+	public void setCurrentEmployee(Employee employee){
+		currentEmployee = employee;
+	}
+	public Employee getCurrentEmployee() {
+		return currentEmployee;
 	}
 }

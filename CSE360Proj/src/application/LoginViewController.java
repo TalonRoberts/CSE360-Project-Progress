@@ -47,7 +47,8 @@ public class LoginViewController{
     	String password = passwordField.getText().toString();
     	Employee loginEmployee = employeeDatabase.getEmployee(employeeList, username);
     
-    	if (loginEmployee!=null && loginEmployee.getPassword().equals(password)) {
+    	if (loginEmployee!=null && loginEmployee.getPassword().equals(password) && !loginEmployee.getPassword().equals("")) {
+    		employeeDatabase.setCurrentEmployee(loginEmployee);
 	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ELMainPage.fxml"));
 	    	newscene = new Scene(fxmlLoader.load());
 	    	currentStage = (Stage) submitButton.getScene().getWindow();
@@ -55,6 +56,11 @@ public class LoginViewController{
     	}
     	else if(loginEmployee==null){
     		errorlabel.setText("User Does Not Exits");
+    		errorlabel.setVisible(true);
+    		passwordField.clear();
+    	}
+    	else if(loginEmployee.getPassword().equals("")) {
+    		errorlabel.setText("Account Not Created");
     		errorlabel.setVisible(true);
     		passwordField.clear();
     	}

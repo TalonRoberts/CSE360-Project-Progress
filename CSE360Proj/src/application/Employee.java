@@ -13,6 +13,7 @@ public class Employee {
 	public Employee(int id, String name) {
 		this.id = id;
 		this.name = name;
+		password = "";
 	}
 	
 	public void setid(int newid) {
@@ -31,5 +32,8 @@ public class Employee {
 	}
 	public String getPassword() {
 		return password;
+	}
+	public int getId() {
+		return id;
 	}
 }

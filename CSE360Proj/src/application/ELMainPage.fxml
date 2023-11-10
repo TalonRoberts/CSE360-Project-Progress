@@ -6,7 +6,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ELMainViewController">
    <children>
       <Label layoutX="224.0" layoutY="8.0" text="Effort Logger">
@@ -31,5 +30,7 @@
          </font>
       </Button>
       <Button fx:id="logoutButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <Label fx:id="employeeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="365.0" prefHeight="17.0" prefWidth="253.0" text=" " />
+      <Button fx:id="infoButton" layoutX="490.0" layoutY="361.0" mnemonicParsing="false" onAction="#showInfo" text="Show User Info" />
    </children>
 </AnchorPane>

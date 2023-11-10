@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.*;	//imports all javafx.scene.control. functions
 import application.Employee;
 import application.EmployeeDatabase;
+import javafx.scene.paint.Color;
 
 public class AccountCreationController {
 	private Scene loginreturn;
@@ -43,10 +45,41 @@ public class AccountCreationController {
     private Button backButton;
     
     @FXML
-    void submitAC (ActionEvent event) throws IOException{
-    	int test = 0;
-    }
+    private Label acLabel;
     
+    @FXML
+    void submitAC (ActionEvent event) throws IOException{
+    	String username = usernameField.getText().toString();
+    	String password = passwordField.getText().toString();
+    	int id = Integer.parseInt(idField.getText());
+    	Employee acEmployee = employeeDatabase.getEmployee(employeeList, id);
+    	if (acEmployee != null && acEmployee.getName().equals(username) && password.length() > 13 && password.length() <= 256 && acEmployee.getPassword().equals("")){
+    		acEmployee.setPassword(password);
+    		errorlabel.setVisible(false);
+    		acLabel.setVisible(true);
+    		passwordField.clear();
+			idField.clear();
+			usernameField.clear();
+    	}
+    	else if(acEmployee == null || !acEmployee.getName().equals(username) || !acEmployee.getPassword().equals("")) {
+    		errorlabel.setText("Invalid ID/Username");
+    		errorlabel.setTextFill(Color.RED);
+    		acLabel.setVisible(false);
+    		errorlabel.setVisible(true);
+    		passwordField.clear();
+    		idField.clear();
+    		usernameField.clear();
+    	}
+    	else if(password.length() < 13 || password.length() > 256) {
+    		errorlabel.setText("Invalid Password");
+			errorlabel.setTextFill(Color.RED);
+			acLabel.setVisible(false);
+			errorlabel.setVisible(true);
+			passwordField.clear();
+			idField.clear();
+			usernameField.clear();
+    	}
+    }
     @FXML
     void backToLogin (ActionEvent event) throws IOException{
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
