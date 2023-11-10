@@ -44,7 +44,7 @@ public class AccountCreationController {
     
     @FXML
     void submitAC (ActionEvent event) throws IOException{
-    	
+    	int test = 0;
     }
     
     @FXML

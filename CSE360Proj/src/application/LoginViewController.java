@@ -39,7 +39,7 @@ public class LoginViewController{
     private Label errorlabel;
     
     @FXML
-    private Button newUserButton;
+    private Button NUButton;
 
     @FXML
     void submitLogin(ActionEvent event) throws IOException {
@@ -69,7 +69,7 @@ public class LoginViewController{
     void switchToAC(ActionEvent event) throws IOException {
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AccountCreation.fxml"));
     	newscene = new Scene(fxmlLoader.load());
-    	currentStage = (Stage) submitButton.getScene().getWindow();
+    	currentStage = (Stage) NUButton.getScene().getWindow();
     	currentStage.setScene(newscene);
     }
 }

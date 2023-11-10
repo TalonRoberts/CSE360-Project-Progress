@@ -13,7 +13,7 @@ public class EmployeeDatabase {
 		employeeList.add(new Employee(3, "Andrew", "Th59"));
 		employeeList.add(new Employee(4, "Talon", "Th59"));
 		employeeList.add(new Employee(5, "Angel", "Th59"));
-		employeeList.add(new Employee(6, "Lynn"));
+		employeeList.add(new Employee(6, "Test"));
 	}
 	
 	public static EmployeeDatabase getInstance() {
