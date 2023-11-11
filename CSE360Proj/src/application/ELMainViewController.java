@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import application.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,6 +43,7 @@ public class ELMainViewController {
 
     @FXML
     void logout(ActionEvent event) throws IOException {
+    	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
     	loginreturn = new Scene(fxmlLoader.load());
     	currentStage = (Stage) logoutButton.getScene().getWindow();

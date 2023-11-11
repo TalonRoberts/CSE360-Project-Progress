@@ -1,6 +1,7 @@
 package application;
 import java.util.ArrayList;
 import application.Employee;
+import application.EmployeeReader;
 
 public class EmployeeDatabase {
 	private static EmployeeDatabase instance;
@@ -9,12 +10,6 @@ public class EmployeeDatabase {
 	
 	private EmployeeDatabase() {
 		employeeList = new ArrayList<>();
-		employeeList.add(new Employee(1, "Daniel", "Th59"));
-		employeeList.add(new Employee(2, "Oscar", "Th59"));
-		employeeList.add(new Employee(3, "Andrew", "Th59"));
-		employeeList.add(new Employee(4, "Talon", "Th59"));
-		employeeList.add(new Employee(5, "Angel", "Th59"));
-		employeeList.add(new Employee(6, "Test"));
 	}
 	
 	public static EmployeeDatabase getInstance() {
@@ -22,6 +17,11 @@ public class EmployeeDatabase {
 			instance = new EmployeeDatabase();
 		}
 		return instance;
+	}
+	
+	public ArrayList<Employee> loadDatabase(String filename) {
+		employeeList = EmployeeReader.readEmployeesFromFile(filename);
+		return employeeList;
 	}
 	
 	public void addEmployee(Employee employee) {

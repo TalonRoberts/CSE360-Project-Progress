@@ -53,15 +53,18 @@ public class AccountCreationController {
     	String password = passwordField.getText().toString();
     	int id = Integer.parseInt(idField.getText());
     	Employee acEmployee = employeeDatabase.getEmployee(employeeList, id);
-    	if (acEmployee != null && acEmployee.getName().equals(username) && password.length() > 13 && password.length() <= 256 && acEmployee.getPassword().equals("")){
+    	if (acEmployee != null && acEmployee.getName().equals(username) && acEmployee.getPassword().equals("NOPASS") && password.length() > 3){
     		acEmployee.setPassword(password);
+    		
+    		EmployeeWriter.writeEmployeesToFile("src/application/employeelist.txt", employeeList);
+    		
     		errorlabel.setVisible(false);
     		acLabel.setVisible(true);
     		passwordField.clear();
 			idField.clear();
 			usernameField.clear();
     	}
-    	else if(acEmployee == null || !acEmployee.getName().equals(username) || !acEmployee.getPassword().equals("")) {
+    	else if(acEmployee == null || !acEmployee.getName().equals(username) || !acEmployee.getPassword().equals("NOPASS")) {
     		errorlabel.setText("Invalid ID/Username");
     		errorlabel.setTextFill(Color.RED);
     		acLabel.setVisible(false);
