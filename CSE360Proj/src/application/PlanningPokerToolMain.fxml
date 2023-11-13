@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="37.0" stroke="BLACK" strokeType="INSIDE" width="602.0" />
+      <Text layoutX="234.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Defect Console">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="44.0" layoutY="92.0" />
+      <DropdownButton layoutX="53.0" layoutY="79.0">
+          <items>
+              <MenuItem text="Business Project" />
+              <MenuItem text="2" />
+              <MenuItem text="3" />
+            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+          </items>
+      </DropdownButton>
+      <Text layoutX="25.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Select the Project">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="25.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Define or update the following Current Defect attributes:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="380.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.a. Clear this Project's Defect Log">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="25.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.b. Select one of the following defect to make it the current Defect or press &quot;Create New Defect&quot;.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="406.0" layoutY="77.0" mnemonicParsing="false" text="Clear this Defect Log" />
+      <Button layoutX="416.0" layoutY="146.0" mnemonicParsing="false" text="Creat New Defect" />
+      <DropdownButton layoutX="53.0" layoutY="148.0">
+         <items>
+            <MenuItem text="--no defect selected--" />
+            <MenuItem text="2" />
+            <MenuItem text="3" />
+            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+         </items>
+      </DropdownButton>
+      <Text layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num   Defect Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="16.0" layoutX="71.0" layoutY="223.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text layoutX="435.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: Closed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="411.0" layoutY="225.0" mnemonicParsing="false" text="Closed" />
+      <Button layoutX="484.0" layoutY="225.0" mnemonicParsing="false" text="Reopen" />
+      <Text layoutX="28.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Defect Symptoms or Cause/resolution ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="37.0" layoutX="30.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" width="554.0" />
+      <Text layoutX="42.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To insert new line, pres  &lt;ctrl + option + return&gt;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step when Injected">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="262.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step when removed">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="453.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Defect Catagory">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These attributes have been saved">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="365.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fix:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <DropdownButton layoutX="394.0" layoutY="404.0">
+         <items>
+            <MenuItem />
+            <MenuItem text="2" />
+            <MenuItem text="3" />
+            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+         </items>
+      </DropdownButton>
+      <Text layoutX="25.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press the Updat&quot;e the Current Defect&quot; to save the changes made above.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="25.0" layoutY="461.0" mnemonicParsing="false" text="Update the current defect" />
+      <Button layoutX="214.0" layoutY="461.0" mnemonicParsing="false" text="Delete the current defect" />
+      <Button layoutX="394.0" layoutY="461.0" mnemonicParsing="false" text="Proceed to the Effort Console" />
+      <ScrollPane layoutX="35.0" layoutY="351.0" prefHeight="57.0" prefWidth="166.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="148.0" />
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="236.0" layoutY="351.0" prefHeight="57.0" prefWidth="166.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="148.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="416.0" layoutY="351.0" prefHeight="57.0" prefWidth="166.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="148.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

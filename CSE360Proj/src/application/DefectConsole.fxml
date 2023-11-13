@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToggleButton layoutX="134.0" layoutY="326.0" mnemonicParsing="false" text="Add User Story" />
+      <ToggleButton layoutX="389.0" layoutY="326.0" mnemonicParsing="false" text="Search Repository" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="37.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Text layoutX="182.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planning Poker Tool">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
