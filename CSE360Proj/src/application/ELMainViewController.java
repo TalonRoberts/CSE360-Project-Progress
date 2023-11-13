@@ -13,8 +13,10 @@ import application.EmployeeDatabase;
 import application.Employee;
 import javafx.scene.control.Label;
 
+
 public class ELMainViewController {
 	private Scene loginreturn;
+	private Scene newscene1;
 	private Stage currentStage;
 	
 	
@@ -61,8 +63,11 @@ public class ELMainViewController {
     }
 
     @FXML
-    void openPlanningPoker(ActionEvent event) {
-
+    void openPlanningPoker(ActionEvent event) throws IOException {
+    	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("ProjectCreation.fxml"));
+    	newscene1 = new Scene(fxmlLoader1.load());
+    	currentStage = (Stage) planningPokerButton.getScene().getWindow();
+    	currentStage.setScene(newscene1);
     }
     
     @FXML
