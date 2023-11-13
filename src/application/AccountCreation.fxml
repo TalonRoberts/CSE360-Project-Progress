@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AccountCreationController">
+   <children>
+      <Label layoutX="124.0" layoutY="61.0" text="Effort Logger Account Creation">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="199.0" layoutY="255.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="166.0" layoutY="151.0" text="ID" />
+      <Label layoutX="105.0" layoutY="260.0" prefHeight="17.0" prefWidth="97.0" text="New Password" />
+      <Button fx:id="submitButton" layoutX="261.0" layoutY="339.0" mnemonicParsing="false" onAction="#submitAC" text="CREATE ACCOUNT" />
+ <Label fx:id="errorlabel" alignment="CENTER" layoutX="242.0" layoutY="301.0" prefHeight="17.0" prefWidth="154.0" text="Invalid ID/Username" textFill="RED" visible="false" />
+      <TextField fx:id="usernameField" layoutX="200.0" layoutY="200.0" prefHeight="26.0" prefWidth="237.0" />
+      <Label layoutX="126.0" layoutY="205.0" text="Username" />
+      <TextField fx:id="idField" layoutX="200.0" layoutY="147.0" prefHeight="25.0" prefWidth="237.0" />
+      <Button fx:id="backButton" layoutX="26.0" layoutY="351.0" mnemonicParsing="false" onAction="#backToLogin" text="BACK" />
+      <Label fx:id="acLabel" layoutX="273.0" layoutY="301.0" text="Account Created!" textFill="#19cd1c" visible="false" />
+   </children>
+</AnchorPane>
