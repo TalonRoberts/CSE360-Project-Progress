@@ -1,7 +1,7 @@
 //author: Angel Ibarra Duran
 //group: Th59
 
-package application;
+//package application;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
