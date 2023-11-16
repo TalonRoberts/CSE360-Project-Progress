@@ -5,7 +5,7 @@ import application.EmployeeReader;
 
 public class UserStoryDatabase {
 	private static UserStoryDatabase instance;
-	private ArrayList<UserStory> userStoryList;
+	private static ArrayList<UserStory> userStoryList;
 	private UserStory currentStory;
 	
 	private UserStoryDatabase() {
@@ -19,9 +19,8 @@ public class UserStoryDatabase {
 		return instance;
 	}
 	
-	public ArrayList<UserStory> loadDatabase(String filename) {
+	public void loadDatabase(String filename) {
 		userStoryList = UserStoryReader.readUserStoriesFromFile(filename);
-		return userStoryList;
 	}
 	
 	public void addStory(UserStory story) {
@@ -32,28 +31,29 @@ public class UserStoryDatabase {
 		userStoryList.remove(story);
 	}
 	
-	public ArrayList<UserStory> getStoryList() {
+	public ArrayList<UserStory> getStoryList(String filePath) {
+		loadDatabase(filePath);
 		return userStoryList;
 	}
 	
 	 public static UserStory getStory(ArrayList<UserStory> list, String storyName) {
  		for (UserStory story: list) {
  			if (story.getStoryName().equals(storyName)) {
- 				System.out.print("found");
+ 				//System.out.print("found");
  				return story;
  			}
  		}
  		return null;
  	}
 
-	// public Employee getEmployee(ArrayList<Employee> list, int id) {
-// 		for (Employee employee: list) {
-// 			if (employee.getId() == id) {
-// 				return employee;
-// 			}
-// 		}
-// 		return null;
-// 	}
+	 public String toString() {
+		String str = "";
+ 		for (UserStory story: userStoryList) {
+ 			str += story.getStoryName();
+ 			str+= "\n";
+ 		}
+ 		return str;
+ 	}
 
 	public void setCurrentStory(UserStory story){
 		currentStory = story;

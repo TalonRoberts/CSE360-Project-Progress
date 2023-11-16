@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class UserStoryCreationController {
 	
 	UserStoryDatabase userStoryDatabase = UserStoryDatabase.getInstance();
-	ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList();
+	ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList("src/application/UserStoryDatabase.txt");
 	
     @FXML
     private Button nextButton;
@@ -31,29 +31,17 @@ public class UserStoryCreationController {
     	String storyName = userStoryName.getText().toString();
     	String storyDesc = userStoryDescription.getText().toString();
     	
-    	UserStory oldStory = UserStoryDatabase.getStory(userStoryList, "temp");
+    	UserStory acStory = UserStoryDatabase.getStory(userStoryList, "temp");
 
     	
-    	
-    	UserStory acStory = new UserStory(oldStory.getProjectName(),oldStory.getProjDesc(),
-    			storyName, storyDesc, 0,"","","");
-    	
-    	acStory.setUserStoryName("blue");
-    	
-    	userStoryList.add(acStory);
-    	userStoryList.remove(oldStory);
+    	acStory.setUserStoryName(storyName);
+    	acStory.setUserStoryDesc(storyDesc);
+
     	
     	
     	UserStoryWriter.writeUserStoriesToFile("src/application/UserStoryDatabase.txt", userStoryList);
     	/// end of my work
     	
-    	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("UserStoryCreation.fxml"));
-    	newscene1 = new Scene(fxmlLoader1.load());
-    	currentStage = (Stage) nextButton.getScene().getWindow();
-    	currentStage.setScene(newscene1);
-    	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("UserStoryCreation.fxml"));
-    	newscene1 = new Scene(fxmlLoader1.load());
-    	currentStage = (Stage) nextButton.getScene().getWindow();
-    	currentStage.setScene(newscene1);
+    	
     }
 }

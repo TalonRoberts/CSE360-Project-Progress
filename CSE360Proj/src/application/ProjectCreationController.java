@@ -16,7 +16,7 @@ public class ProjectCreationController {
 	private Stage currentStage;
 	
 	UserStoryDatabase userStoryDatabase = UserStoryDatabase.getInstance();
-	ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList();
+	ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList("src/application/UserStoryDatabase.txt");
 	
 	@FXML
     private Button nextButton;
@@ -35,8 +35,10 @@ public class ProjectCreationController {
     	String projDesc = projectDescription.getText().toString();
     	
     	UserStory acStory = new UserStory(projName,projDesc,"temp");
-    	userStoryList.add(acStory);
-    	
+
+    	userStoryDatabase.addStory(acStory);
+
+    	//System.out.print(userStoryDatabase);
     	
     	UserStoryWriter.writeUserStoriesToFile("src/application/UserStoryDatabase.txt", userStoryList);
     	//end of my block
