@@ -49,12 +49,25 @@ public class UserStory {
    {
       _userStoryName = name;
    }
-   
    public void setUserStoryDesc(String desc)
    {
       _userStory = desc;
    }
    
+   public void setUserRole(String role)
+   {
+      _userRole = role;
+   }
+   
+   public void setUserProgLang(String lang)
+   {
+      _progLang = lang;
+   }
+   public void setDomain(String domain)
+   {
+      _domain = domain;
+   }
+
    // other getters (for winnowing down)
    public String getProjectName()
    {
