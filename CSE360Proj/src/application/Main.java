@@ -20,7 +20,14 @@ public class Main extends Application {
 		try {
 			EmployeeDatabase employeeDatabase = EmployeeDatabase.getInstance();
 	    	ArrayList<Employee> employeeList = employeeDatabase.loadDatabase(getClass().getResource("/application/employeelist.txt").getPath());
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+	    	Project proj1 = new Project("Business Project", "Project 2");
+		    Project proj2 = new Project("Development Project", "Project 1");
+		    ProjectDatabase projectDatabase = ProjectDatabase.getInstance();
+			ArrayList<Project> projectList = projectDatabase.getProjectList();
+		    projectDatabase.addProject(proj2);
+		    projectDatabase.addProject(proj1);
+	    	
+		    FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

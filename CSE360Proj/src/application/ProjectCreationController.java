@@ -29,19 +29,7 @@ public class ProjectCreationController {
 
     @FXML
     void moveToUserStories(ActionEvent event) throws IOException {
-    	//Code i added that adds a user story to the databse only with 
-    	//project name and desc info though
-    	String projName = projectName.getText().toString();
-    	String projDesc = projectDescription.getText().toString();
     	
-    	UserStory acStory = new UserStory(projName,projDesc,"temp");
-
-    	userStoryDatabase.addStory(acStory);
-
-    	//System.out.print(userStoryDatabase);
-    	
-    	UserStoryWriter.writeUserStoriesToFile("src/application/UserStoryDatabase.txt", userStoryList);
-    	//end of my block
     	
     	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("UserStoryCreation.fxml"));
     	newscene1 = new Scene(fxmlLoader1.load());

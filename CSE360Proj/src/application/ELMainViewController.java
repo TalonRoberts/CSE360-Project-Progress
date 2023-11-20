@@ -53,8 +53,11 @@ public class ELMainViewController {
     }
 
     @FXML
-    void openEffortLog(ActionEvent event) {
-    	
+    void openEffortLog(ActionEvent event) throws IOException {
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EffortLogger.fxml"));
+    	loginreturn = new Scene(fxmlLoader.load());
+    	currentStage = (Stage) logoutButton.getScene().getWindow();
+    	currentStage.setScene(loginreturn);
     }
 
     @FXML

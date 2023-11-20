@@ -56,7 +56,7 @@ public class AccountCreationController {
     	if (acEmployee != null && acEmployee.getName().equals(username) && acEmployee.getPassword().equals("NOPASS") && password.length() > 3){
     		acEmployee.setPassword(password);
     		
-    		EmployeeWriter.writeEmployeesToFile("src/application/employeelist.txt", employeeList);
+    		EmployeeWriter.writeEmployeesToFile(getClass().getResource("/application/employeelist.txt").getPath(), employeeList);
     		
     		errorlabel.setVisible(false);
     		acLabel.setVisible(true);
