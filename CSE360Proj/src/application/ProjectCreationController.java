@@ -29,6 +29,11 @@ public class ProjectCreationController {
 
     @FXML
     void moveToUserStories(ActionEvent event) throws IOException {
+    	String projDesc = projectDescription.getText().toString();
+    	String projName = projectName.getText().toString();
+    	
+    	userStoryDatabase.setCurrentProject(projName);
+    	userStoryDatabase.setCurrentProjectDesc(projDesc);
     	
     	
     	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("UserStoryCreation.fxml"));

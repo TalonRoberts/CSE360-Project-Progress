@@ -7,7 +7,8 @@ public class UserStoryDatabase {
 	private static UserStoryDatabase instance;
 	private static ArrayList<UserStory> userStoryList;
 	private UserStory currentStory;
-	
+	private String currentProject;
+	private String currentProjectDesc;
 	private UserStoryDatabase() {
 		userStoryList = new ArrayList<>();
 	}
@@ -36,6 +37,10 @@ public class UserStoryDatabase {
 		return userStoryList;
 	}
 	
+	public ArrayList<UserStory> getList() {
+		return userStoryList;
+	}
+	
 	 public static UserStory getStory(ArrayList<UserStory> list, String storyName) {
  		for (UserStory story: list) {
  			if (story.getStoryName().equals(storyName)) {
@@ -50,6 +55,8 @@ public class UserStoryDatabase {
 		String str = "";
  		for (UserStory story: userStoryList) {
  			str += story.getStoryName();
+ 			str += " ";
+ 			str += story.getWeight();
  			str+= "\n";
  		}
  		return str;
@@ -60,5 +67,18 @@ public class UserStoryDatabase {
 	}
 	public UserStory getCurrentStory() {
 		return currentStory;
+	}
+	
+	public void setCurrentProject(String name){
+		currentProject = name;
+	}
+	public String getCurrentProject() {
+		return currentProject;
+	}
+	public void setCurrentProjectDesc(String text){
+		currentProjectDesc = text;
+	}
+	public String getCurrentProjectDesc() {
+		return currentProjectDesc;
 	}
 }

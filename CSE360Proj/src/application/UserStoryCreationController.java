@@ -13,9 +13,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 public class UserStoryCreationController {
-	//UserStoryDatabase userStoryDatabase = UserStoryDatabase.getInstance();
-	//ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList();
-	
+
 	UserStoryDatabase userStoryDatabase = UserStoryDatabase.getInstance();
 	ArrayList<UserStory> userStoryList = userStoryDatabase.getStoryList("src/application/UserStoryDatabase.txt");
 	
@@ -55,17 +53,20 @@ public class UserStoryCreationController {
 
     @FXML
     void moveToUserStories(ActionEvent event) throws IOException {
-    	//Trying to get it to update between pages working **oscar**
+    	//creates new user story with given name and description **oscar**
     	String storyName = userStoryName.getText().toString();
     	String storyDesc = userStoryDescription.getText().toString();
     	
-    	UserStory acStory = new UserStory(" "," ",storyName, storyDesc,0,"null","null","null");
+    	UserStory acStory = new UserStory(userStoryDatabase.getCurrentProject(),
+    									userStoryDatabase.getCurrentProjectDesc(),
+    									storyName, storyDesc,0,"null","null","null");
 
-    	userStoryDatabase.addStory(acStory);
+    	//userStoryDatabase.addStory(acStory); add after getting all data needed
 
     	//System.out.print(userStoryDatabase);
+    	userStoryDatabase.setCurrentStory(acStory); //added
     	
-    	UserStoryWriter.writeUserStoriesToFile("src/application/UserStoryDatabase.txt", userStoryList);
+    	//UserStoryWriter.writeUserStoriesToFile("src/application/UserStoryDatabase.txt", userStoryList);
     	/// end of my work
 
     	FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("testVoting.fxml"));

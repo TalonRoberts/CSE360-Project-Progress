@@ -90,4 +90,21 @@ public class UserStory {
    {
       return _domain;
    }
+   
+	 public String toString() {
+		String str = "";
+
+			str += _projName + " " +
+		      _projDesc + " " +
+		      _userStoryName + " " +
+		      _userStory + " " +
+		      _weight + " " +
+		      _userRole + " " +
+		      _progLang + " " +
+		      _domain + " ";
+			
+			str+= "\n";
+			
+		return str;
+	 }
 }
