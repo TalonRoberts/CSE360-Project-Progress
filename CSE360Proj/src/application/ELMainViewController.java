@@ -61,8 +61,11 @@ public class ELMainViewController {
     }
 
     @FXML
-    void openHistoricalData(ActionEvent event) {
-
+    void openHistoricalData(ActionEvent event) throws IOException {
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("historical.fxml"));
+    	loginreturn = new Scene(fxmlLoader.load());
+    	currentStage = (Stage) logoutButton.getScene().getWindow();
+    	currentStage.setScene(loginreturn);
     }
 
     @FXML

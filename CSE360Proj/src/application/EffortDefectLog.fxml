@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EffortDefectLogController">
+   <children>
+      <TableView fx:id="ELTable" editable="true" layoutX="68.0" layoutY="92.0" prefHeight="403.0" prefWidth="712.0">
+        <columns>
+          <TableColumn fx:id="employeeColumn" prefWidth="82.0" text="Employee ID" />
+          <TableColumn fx:id="dateColumn" prefWidth="72.0" text="Date" />
+            <TableColumn prefWidth="162.0" text="Time">
+               <columns>
+                  <TableColumn fx:id="startColumn" prefWidth="54.0" text="Start" />
+                  <TableColumn fx:id="stopColumn" prefWidth="69.0" text="Stop" />
+                  <TableColumn fx:id="deltaColumn" prefWidth="56.0" text="Delta" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="LCSColumn" prefWidth="115.0" text="Life Cycle Step" />
+            <TableColumn prefWidth="285.0" text="Effort">
+               <columns>
+                  <TableColumn fx:id="categoryColumn" prefWidth="127.0" text="Category" />
+                  <TableColumn fx:id="specificsColumn" prefWidth="136.0" text="Specifics" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="728.0" layoutY="515.0" mnemonicParsing="false" text="BACK" onAction="#back" />
+      <ComboBox fx:id="projectComboBox" layoutX="115.0" layoutY="42.0" prefWidth="150.0" />
+      <Label layoutX="68.0" layoutY="46.0" text="Project:" />
+   </children>
+</AnchorPane>

@@ -7,10 +7,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserStoryCreationController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Label layoutX="228.0" layoutY="7.0" text="Effort Logger">
                <font>
@@ -32,7 +31,27 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button fx:id="nextButton" layoutX="522.0" layoutY="352.0" mnemonicParsing="false" onAction="#moveToUserStories" text="Next" />
+            <Button fx:id="nextButton" layoutX="522.0" layoutY="352.0" mnemonicParsing="false" onAction="#moveToVoting" text="Next" />
+            <Label layoutX="243.0" layoutY="56.0" text="User Story">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="storyNumber" layoutX="336.0" layoutY="56.0" prefHeight="27.0" prefWidth="42.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameError" layoutX="215.0" layoutY="302.0" text="Please Enter a User Story Name" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="descriptionError" layoutX="201.0" layoutY="334.0" text="Please Enter a User Story Description" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

@@ -9,6 +9,7 @@ public class UserStoryDatabase {
 	private UserStory currentStory;
 	private String currentProject;
 	private String currentProjectDesc;
+	
 	private UserStoryDatabase() {
 		userStoryList = new ArrayList<>();
 	}
@@ -80,5 +81,9 @@ public class UserStoryDatabase {
 	}
 	public String getCurrentProjectDesc() {
 		return currentProjectDesc;
+	}
+	
+	public void setList(ArrayList<UserStory> list) {
+		userStoryList = list;
 	}
 }

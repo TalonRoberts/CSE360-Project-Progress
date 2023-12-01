@@ -14,12 +14,12 @@
          </font>
       </Label>
       <Line endX="499.0" endY="-1.1444091796875E-5" layoutX="100.0" layoutY="51.0" startX="-100.0" />
-      <Button fx:id="planningPokerButton" layoutX="147.0" layoutY="253.0" mnemonicParsing="false" onAction="#openPlanningPoker" prefHeight="51.0" prefWidth="308.0" text="Planning Poker">
+      <Button fx:id="planningPokerButton" layoutX="147.0" layoutY="181.0" mnemonicParsing="false" onAction="#openPlanningPoker" prefHeight="51.0" prefWidth="308.0" text="Planning Poker">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="historicalDataButton" layoutX="146.0" layoutY="180.0" mnemonicParsing="false" onAction="#openHistoricalData" prefHeight="51.0" prefWidth="308.0" text="Historical Data">
+      <Button fx:id="historicalDataButton" layoutX="146.0" layoutY="249.0" mnemonicParsing="false" onAction="#openHistoricalData" prefHeight="51.0" prefWidth="308.0" text="Historical Data">
          <font>
             <Font size="18.0" />
          </font>
